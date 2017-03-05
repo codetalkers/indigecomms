@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# indigecomms
+indigecomms.com
+>>>>>>> 829c117948a328b17ff4e57637c5ae2517bd03e0
