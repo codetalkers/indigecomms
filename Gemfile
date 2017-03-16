@@ -27,6 +27,8 @@ gem 'rails_admin', '~> 1.1.1'
 gem 'devise'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+# A rails helper that inlines SVG octicons https://octicons.github.com/
+gem 'octicons_helper'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

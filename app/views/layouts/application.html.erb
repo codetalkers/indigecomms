@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Indigecomms</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Indigecomms</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
+<body>
 
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/bills">Bills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted"><%= link_to image_tag("/assets/indigecomms_header.jpg"), root_url %></h3>
+<div class="container">
+  <div class="header clearfix">
+    <nav>
+      <ul class="nav nav-pills float-right">
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#call_us"><%= octicon "device-mobile", :height => 50, :"aria-label" => "Call Us" %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#email_us"><%= octicon "mail", :height => 50, :"aria-label" => "Email Us" %></a>
+        </li>
+      </ul>
+    </nav>
+    <h3 class="text-muted"><%= link_to image_tag("indigecomms_header.jpg"), root_url %></h3>
+  </div>
+
+  <%= yield %>
+  <footer class="footer">
+    <div class="row">
+      <div class="col-lg-6">
+        <%#= image_tag("indigecomms_feather.png", style: "width:50px;padding:0;") %><br/><p class="lead">&copy; Indigecomms <%= Time.now.year %></p>
       </div>
+      <div class="col-lg-6 push-3">
+        <p>
+          <%= link_to image_tag("Twitter_Logo_Blue.png", style: "width:80px;padding:0;"), "http://twitter.com/indigecomms", target: "_blank" %>
+          <%= link_to image_tag("instagram.png", style: "width:50px;padding:0;"), "http://instagram.com/indigecomms", target: "_blank" %>
+        </p>
+      </div>
+    </div>
+  </footer>
 
-    <%= yield %>
-      <footer class="footer">
-        <p>&copy; Indigecomms 2017</p>
-      </footer>
+</div>
+<%= render "/layouts/modal" %>
+<!-- /container -->
 
-    </div> <!-- /container -->
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
 </html>
