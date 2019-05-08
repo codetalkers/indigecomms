@@ -13,7 +13,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Bootstrap 4 Ruby Gem for Rails / Sprockets and Compass.
-gem 'bootstrap'
+gem 'bootstrap', '>= 4.3.1'
 # Minimal authorization through OO design and pure Ruby classes
 gem 'pundit'
 # Flexible authentication solution for Rails with Warden.
